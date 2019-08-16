@@ -1,12 +1,14 @@
+    
+const site='/serviceWoker';
 self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('static-v1').then(function(cache) {
         return cache.addAll([
-          '/img/',
-          '/img/benelli3.jpg',
-          '/img/descarga.jpg',
-          '/img/desert.jpg',
-          '/img/landscape-nature-forest-fog-sunrise-sunset-556576-pxhere.com.jpg'
+          site+'/img/',
+          site+'/img/benelli3.jpg',
+          site+'/img/descarga.jpg',
+          site+'/img/desert.jpg',
+          site+'/img/landscape-nature-forest-fog-sunrise-sunset-556576-pxhere.com.jpg'
         ]);
       })
     );
